@@ -1,0 +1,47 @@
+---
+layout:     post                    # 使用的布局（不需要改）
+title:      ICEM学习笔记(二)一些小操作               # 标题 
+subtitle:   ICEM	 #副标
+date:       2020-04-20              # 时间
+author:     nanmu                      # 作者
+header-img: img/post-bg-coffee.jpeg    #这篇文章标题背景图片
+catalog: true                       # 是否归档
+tags:                               #标签
+    - 学习
+---
+** ## 视频:
+（1）**`https://www.bilibili.com/video/BV1ht411D7Ks`**
+看了几个看不下去了，学学基本操作还行，看参数设置算了吧，画的个什么垃圾玩意儿
+（2）**`https://www.bilibili.com/video/BV1KW411p7Nn`
+干货还挺多，可以
+* ##  **节点创建的函数用法：**
+![](https://upload-images.jianshu.io/upload_images/22945609-cc6e468ae37b8c92.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+**[-0.5,0.5,0.1]:**
+start = -0.5, end = 0.5, step = 0.1
+**[m]:**
+m为上面公式取的点，直接带入x坐标
+**[sqrt((0.1+m^2)/3.14)]:**
+用m来获得f(m),赋值给对应的Y坐标
+**[0]:**
+Z坐标取值为0
+* ## 字体太小要瞎了
+#`setting` => `display` => `select icon size` =>`Huge` => `退出重进`
+* ## 如果3D内存在2D面：
+划分块的时候对2D的面进行面关联，否则该面上不会存在网格
+* ## 快捷键：
+V：视野内全选
+* ## 几何修复：
+红色线：与两个面相交 = 希望看到的结果
+黄色线：只与一个面相交 = 非特殊情况就是出了问题
+蓝色线：3个或更多的面 = 可能有问题
+绿色：不与任何面相交 = 必删
+
+
+* ## 其他：
+1.如果对线上设置node为0.则以面为主进行划分
+2.网格方向若和流动方向不一致容易伪扩散
+3.右键blocking选择index进行索引过滤，可以便于选取关联
+4.创建点的坐标可以用公式，例如5*sqrt(3)
+
+* ## 画例：
+![2020年4月16日](https://upload-images.jianshu.io/upload_images/22945609-7382a0438784933a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
